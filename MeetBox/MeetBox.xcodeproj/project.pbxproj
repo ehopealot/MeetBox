@@ -13,6 +13,9 @@
 		1BA3F6441D46A69B00911B4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BA3F6421D46A69B00911B4F /* Main.storyboard */; };
 		1BA3F6461D46A69B00911B4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BA3F6451D46A69B00911B4F /* Assets.xcassets */; };
 		1BA3F6491D46A69B00911B4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BA3F6471D46A69B00911B4F /* LaunchScreen.storyboard */; };
+		1BA3F6691D46B8F700911B4F /* GTLRNetworking_Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA3F6661D46B8F600911B4F /* GTLRNetworking_Sources.m */; };
+		1BA3F66A1D46B8F700911B4F /* GTLROAuth2_Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA3F6671D46B8F600911B4F /* GTLROAuth2_Sources.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1BA3F66B1D46B8F700911B4F /* GTLRCommon_Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA3F6681D46B8F600911B4F /* GTLRCommon_Sources.m */; };
 		63DE5B494FD1B4DE4C663C83 /* Pods_MeetBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5737E8B5E8B6E10E76E83F /* Pods_MeetBox.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +31,9 @@
 		1BA3F6451D46A69B00911B4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BA3F6481D46A69B00911B4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BA3F64A1D46A69B00911B4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BA3F6661D46B8F600911B4F /* GTLRNetworking_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLRNetworking_Sources.m; path = "google-api-objectivec-client-for-rest/Deps/GTLRNetworking_Sources.m"; sourceTree = SOURCE_ROOT; };
+		1BA3F6671D46B8F600911B4F /* GTLROAuth2_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLROAuth2_Sources.m; path = "google-api-objectivec-client-for-rest/Deps/GTLROAuth2_Sources.m"; sourceTree = SOURCE_ROOT; };
+		1BA3F6681D46B8F600911B4F /* GTLRCommon_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLRCommon_Sources.m; path = "google-api-objectivec-client-for-rest/Source/GTLRCommon_Sources.m"; sourceTree = SOURCE_ROOT; };
 		23FFA3A5359AF4F3B350B80A /* Pods-MeetBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeetBox/Pods-MeetBox.release.xcconfig"; sourceTree = "<group>"; };
 		AF5737E8B5E8B6E10E76E83F /* Pods_MeetBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -65,6 +71,7 @@
 		1BA3F6381D46A69A00911B4F /* MeetBox */ = {
 			isa = PBXGroup;
 			children = (
+				1BA3F6651D46B8D900911B4F /* Google */,
 				1BA3F63C1D46A69B00911B4F /* AppDelegate.h */,
 				1BA3F63D1D46A69B00911B4F /* AppDelegate.m */,
 				1BA3F63F1D46A69B00911B4F /* ViewController.h */,
@@ -84,6 +91,16 @@
 				1BA3F63A1D46A69A00911B4F /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1BA3F6651D46B8D900911B4F /* Google */ = {
+			isa = PBXGroup;
+			children = (
+				1BA3F6661D46B8F600911B4F /* GTLRNetworking_Sources.m */,
+				1BA3F6671D46B8F600911B4F /* GTLROAuth2_Sources.m */,
+				1BA3F6681D46B8F600911B4F /* GTLRCommon_Sources.m */,
+			);
+			name = Google;
 			sourceTree = "<group>";
 		};
 		8B14B10B9A0F80FBE7A1DABB /* Frameworks */ = {
@@ -227,6 +244,9 @@
 				1BA3F6411D46A69B00911B4F /* ViewController.m in Sources */,
 				1BA3F63E1D46A69B00911B4F /* AppDelegate.m in Sources */,
 				1BA3F63B1D46A69A00911B4F /* main.m in Sources */,
+				1BA3F66A1D46B8F700911B4F /* GTLROAuth2_Sources.m in Sources */,
+				1BA3F66B1D46B8F700911B4F /* GTLRCommon_Sources.m in Sources */,
+				1BA3F6691D46B8F700911B4F /* GTLRNetworking_Sources.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +359,7 @@
 			baseConfigurationReference = 03822D64E91AC0496207B127 /* Pods-MeetBox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/google-api-objectivec-client-for-rest/**";
 				INFOPLIST_FILE = MeetBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dropbox.MeetBox;
@@ -351,6 +372,7 @@
 			baseConfigurationReference = 23FFA3A5359AF4F3B350B80A /* Pods-MeetBox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/google-api-objectivec-client-for-rest/**";
 				INFOPLIST_FILE = MeetBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dropbox.MeetBox;
