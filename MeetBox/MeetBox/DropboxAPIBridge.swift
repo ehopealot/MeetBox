@@ -12,8 +12,8 @@ import SwiftyDropbox
 
 @objc class DropboxAPIBridge : NSObject {
     
-    static func setupAppKey() {
-        Dropbox.setupWithAppKey("06h56i3ovyl0fb6")
+    static func setupWithAppKey(appKey: NSString) {
+        Dropbox.setupWithAppKey(appKey as String)
     }
     
     static func connectWithDropbox(vc: UIViewController) {

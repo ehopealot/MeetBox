@@ -16,10 +16,20 @@
 
 @implementation AppDelegate
 
+- (NSString *)getDropboxAppKey
+{
+    static NSString *appKey = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Keys" ofType:@"plist"]];
+        appKey = dictionary[@"dropbox_app_key"];
+    });
+    return appKey;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [DropboxAPIBridge setupAppKey];
+    [DropboxAPIBridge setupWithAppKey:[self getDropboxAppKey]];
 
     return YES;
 }
