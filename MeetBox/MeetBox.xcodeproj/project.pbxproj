@@ -16,6 +16,14 @@
 		1BA3F6691D46B8F700911B4F /* GTLRNetworking_Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA3F6661D46B8F600911B4F /* GTLRNetworking_Sources.m */; };
 		1BA3F66A1D46B8F700911B4F /* GTLROAuth2_Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA3F6671D46B8F600911B4F /* GTLROAuth2_Sources.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1BA3F66B1D46B8F700911B4F /* GTLRCommon_Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA3F6681D46B8F600911B4F /* GTLRCommon_Sources.m */; };
+		1BA3F6711D46C42800911B4F /* GoogleCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA3F6701D46C42800911B4F /* GoogleCalendarViewController.m */; };
+		1BA3F6731D46C5EA00911B4F /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1BA3F6721D46C5EA00911B4F /* Keys.plist */; };
+		1BCA0F021D46C8A600768DDC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCA0F011D46C8A600768DDC /* SystemConfiguration.framework */; };
+		1BCA0F041D46C8AB00768DDC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCA0F031D46C8AB00768DDC /* Security.framework */; };
+		1BCA0F0D1D46C96A00768DDC /* GTLRCalendarObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA0F081D46C96A00768DDC /* GTLRCalendarObjects.m */; };
+		1BCA0F0E1D46C96A00768DDC /* GTLRCalendarQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA0F0A1D46C96A00768DDC /* GTLRCalendarQuery.m */; };
+		1BCA0F0F1D46C96A00768DDC /* GTLRCalendarService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA0F0C1D46C96A00768DDC /* GTLRCalendarService.m */; };
+		1BCA0F111D46CA1D00768DDC /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BCA0F101D46CA1D00768DDC /* GTMOAuth2ViewTouch.xib */; };
 		63DE5B494FD1B4DE4C663C83 /* Pods_MeetBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5737E8B5E8B6E10E76E83F /* Pods_MeetBox.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +42,19 @@
 		1BA3F6661D46B8F600911B4F /* GTLRNetworking_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLRNetworking_Sources.m; path = "google-api-objectivec-client-for-rest/Deps/GTLRNetworking_Sources.m"; sourceTree = SOURCE_ROOT; };
 		1BA3F6671D46B8F600911B4F /* GTLROAuth2_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLROAuth2_Sources.m; path = "google-api-objectivec-client-for-rest/Deps/GTLROAuth2_Sources.m"; sourceTree = SOURCE_ROOT; };
 		1BA3F6681D46B8F600911B4F /* GTLRCommon_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLRCommon_Sources.m; path = "google-api-objectivec-client-for-rest/Source/GTLRCommon_Sources.m"; sourceTree = SOURCE_ROOT; };
+		1BA3F66F1D46C42800911B4F /* GoogleCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleCalendarViewController.h; sourceTree = "<group>"; };
+		1BA3F6701D46C42800911B4F /* GoogleCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleCalendarViewController.m; sourceTree = "<group>"; };
+		1BA3F6721D46C5EA00911B4F /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		1BCA0F011D46C8A600768DDC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1BCA0F031D46C8AB00768DDC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		1BCA0F061D46C96A00768DDC /* GTLRCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLRCalendar.h; path = "google-api-objectivec-client-for-rest/Source/GeneratedServices/Calendar/GTLRCalendar.h"; sourceTree = SOURCE_ROOT; };
+		1BCA0F071D46C96A00768DDC /* GTLRCalendarObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLRCalendarObjects.h; path = "google-api-objectivec-client-for-rest/Source/GeneratedServices/Calendar/GTLRCalendarObjects.h"; sourceTree = SOURCE_ROOT; };
+		1BCA0F081D46C96A00768DDC /* GTLRCalendarObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLRCalendarObjects.m; path = "google-api-objectivec-client-for-rest/Source/GeneratedServices/Calendar/GTLRCalendarObjects.m"; sourceTree = SOURCE_ROOT; };
+		1BCA0F091D46C96A00768DDC /* GTLRCalendarQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLRCalendarQuery.h; path = "google-api-objectivec-client-for-rest/Source/GeneratedServices/Calendar/GTLRCalendarQuery.h"; sourceTree = SOURCE_ROOT; };
+		1BCA0F0A1D46C96A00768DDC /* GTLRCalendarQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLRCalendarQuery.m; path = "google-api-objectivec-client-for-rest/Source/GeneratedServices/Calendar/GTLRCalendarQuery.m"; sourceTree = SOURCE_ROOT; };
+		1BCA0F0B1D46C96A00768DDC /* GTLRCalendarService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLRCalendarService.h; path = "google-api-objectivec-client-for-rest/Source/GeneratedServices/Calendar/GTLRCalendarService.h"; sourceTree = SOURCE_ROOT; };
+		1BCA0F0C1D46C96A00768DDC /* GTLRCalendarService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLRCalendarService.m; path = "google-api-objectivec-client-for-rest/Source/GeneratedServices/Calendar/GTLRCalendarService.m"; sourceTree = SOURCE_ROOT; };
+		1BCA0F101D46CA1D00768DDC /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GTMOAuth2ViewTouch.xib; path = "google-api-objectivec-client-for-rest/Deps/gtm-oauth2/Source/Touch/GTMOAuth2ViewTouch.xib"; sourceTree = SOURCE_ROOT; };
 		23FFA3A5359AF4F3B350B80A /* Pods-MeetBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeetBox/Pods-MeetBox.release.xcconfig"; sourceTree = "<group>"; };
 		AF5737E8B5E8B6E10E76E83F /* Pods_MeetBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -43,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BCA0F041D46C8AB00768DDC /* Security.framework in Frameworks */,
+				1BCA0F021D46C8A600768DDC /* SystemConfiguration.framework in Frameworks */,
 				63DE5B494FD1B4DE4C663C83 /* Pods_MeetBox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,6 +76,7 @@
 		1BA3F62D1D46A69900911B4F = {
 			isa = PBXGroup;
 			children = (
+				1BA3F6721D46C5EA00911B4F /* Keys.plist */,
 				1BA3F6381D46A69A00911B4F /* MeetBox */,
 				1BA3F6371D46A69900911B4F /* Products */,
 				F2335451004005D74EFAB8A3 /* Pods */,
@@ -81,6 +105,8 @@
 				1BA3F6471D46A69B00911B4F /* LaunchScreen.storyboard */,
 				1BA3F64A1D46A69B00911B4F /* Info.plist */,
 				1BA3F6391D46A69A00911B4F /* Supporting Files */,
+				1BA3F66F1D46C42800911B4F /* GoogleCalendarViewController.h */,
+				1BA3F6701D46C42800911B4F /* GoogleCalendarViewController.m */,
 			);
 			path = MeetBox;
 			sourceTree = "<group>";
@@ -96,6 +122,8 @@
 		1BA3F6651D46B8D900911B4F /* Google */ = {
 			isa = PBXGroup;
 			children = (
+				1BCA0F101D46CA1D00768DDC /* GTMOAuth2ViewTouch.xib */,
+				1BCA0F051D46C96200768DDC /* Calendar */,
 				1BA3F6661D46B8F600911B4F /* GTLRNetworking_Sources.m */,
 				1BA3F6671D46B8F600911B4F /* GTLROAuth2_Sources.m */,
 				1BA3F6681D46B8F600911B4F /* GTLRCommon_Sources.m */,
@@ -103,9 +131,25 @@
 			name = Google;
 			sourceTree = "<group>";
 		};
+		1BCA0F051D46C96200768DDC /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				1BCA0F061D46C96A00768DDC /* GTLRCalendar.h */,
+				1BCA0F071D46C96A00768DDC /* GTLRCalendarObjects.h */,
+				1BCA0F081D46C96A00768DDC /* GTLRCalendarObjects.m */,
+				1BCA0F091D46C96A00768DDC /* GTLRCalendarQuery.h */,
+				1BCA0F0A1D46C96A00768DDC /* GTLRCalendarQuery.m */,
+				1BCA0F0B1D46C96A00768DDC /* GTLRCalendarService.h */,
+				1BCA0F0C1D46C96A00768DDC /* GTLRCalendarService.m */,
+			);
+			name = Calendar;
+			sourceTree = "<group>";
+		};
 		8B14B10B9A0F80FBE7A1DABB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1BCA0F031D46C8AB00768DDC /* Security.framework */,
+				1BCA0F011D46C8A600768DDC /* SystemConfiguration.framework */,
 				AF5737E8B5E8B6E10E76E83F /* Pods_MeetBox.framework */,
 			);
 			name = Frameworks;
@@ -180,6 +224,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BCA0F111D46CA1D00768DDC /* GTMOAuth2ViewTouch.xib in Resources */,
+				1BA3F6731D46C5EA00911B4F /* Keys.plist in Resources */,
 				1BA3F6491D46A69B00911B4F /* LaunchScreen.storyboard in Resources */,
 				1BA3F6461D46A69B00911B4F /* Assets.xcassets in Resources */,
 				1BA3F6441D46A69B00911B4F /* Main.storyboard in Resources */,
@@ -246,6 +292,10 @@
 				1BA3F63B1D46A69A00911B4F /* main.m in Sources */,
 				1BA3F66A1D46B8F700911B4F /* GTLROAuth2_Sources.m in Sources */,
 				1BA3F66B1D46B8F700911B4F /* GTLRCommon_Sources.m in Sources */,
+				1BCA0F0D1D46C96A00768DDC /* GTLRCalendarObjects.m in Sources */,
+				1BCA0F0F1D46C96A00768DDC /* GTLRCalendarService.m in Sources */,
+				1BA3F6711D46C42800911B4F /* GoogleCalendarViewController.m in Sources */,
+				1BCA0F0E1D46C96A00768DDC /* GTLRCalendarQuery.m in Sources */,
 				1BA3F6691D46B8F700911B4F /* GTLRNetworking_Sources.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,8 +412,10 @@
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/google-api-objectivec-client-for-rest/**";
 				INFOPLIST_FILE = MeetBox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dropbox.MeetBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64";
 			};
 			name = Debug;
 		};
@@ -377,6 +429,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dropbox.MeetBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64";
 			};
 			name = Release;
 		};

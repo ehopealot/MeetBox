@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2D86043DC7817BBF7BB0CA35554BDC57F4F062AC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2D86043DC7817BBF7BB0CA35554BDC57F4F062AC" : 0,
+    "DA11C42EB355C0396A2B946A1068197404625E04" : 0,
+    "9D01D5BCCDE322646FEB1945347C3CF4E96976E3" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "679D1A80-0215-4DC1-9465-EC89B08C6ED6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2D86043DC7817BBF7BB0CA35554BDC57F4F062AC" : "MeetBox\/",
+    "DA11C42EB355C0396A2B946A1068197404625E04" : "MeetBox\/MeetBox\/google-api-objectivec-client-for-rest\/",
+    "9D01D5BCCDE322646FEB1945347C3CF4E96976E3" : "MeetBox\/MeetBox\/google-api-objectivec-client-for-rest\/Deps\/gtm-oauth2\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MeetBox",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MeetBox\/MeetBox.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ehopealot\/MeetBox.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2D86043DC7817BBF7BB0CA35554BDC57F4F062AC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/google\/gtm-oauth2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9D01D5BCCDE322646FEB1945347C3CF4E96976E3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/google\/google-api-objectivec-client-for-rest.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DA11C42EB355C0396A2B946A1068197404625E04"
+    }
+  ]
+}

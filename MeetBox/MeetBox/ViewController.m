@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "GoogleCalendarViewController.h"
 
 @interface ViewController ()
 
@@ -58,7 +59,9 @@
 }
 
 - (void)connectGoogle:(id)sender {
-
+    GoogleCalendarViewController *calendarController = [[GoogleCalendarViewController alloc] init];
+    [self presentViewController:[[UINavigationController alloc] initWithRootViewController:calendarController] animated:YES completion:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {
