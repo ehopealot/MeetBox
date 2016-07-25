@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "GoogleCalendarViewController.h"
 
+#import "MeetBox-Swift.h"
+
 @interface ViewController ()
 
 @property (nonatomic, strong) UIButton *connectDropboxButton;
@@ -55,13 +57,12 @@
 }
 
 - (void)connectDropbox:(id)sender {
-
+    [DropboxAPIBridge connectWithDropbox:self];
 }
 
 - (void)connectGoogle:(id)sender {
     GoogleCalendarViewController *calendarController = [[GoogleCalendarViewController alloc] init];
     [self presentViewController:[[UINavigationController alloc] initWithRootViewController:calendarController] animated:YES completion:nil];
-    
 }
 
 - (void)didReceiveMemoryWarning {

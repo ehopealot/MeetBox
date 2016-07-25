@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "SwiftyDropbox.h"
+#import "MeetBox-Swift.h"
 
 @interface AppDelegate ()
 
@@ -18,9 +19,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    [DropboxAPIBridge setupAppKey];
 
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options {
+    [DropboxAPIBridge handleOpenUrl:url];
+    return NO;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
