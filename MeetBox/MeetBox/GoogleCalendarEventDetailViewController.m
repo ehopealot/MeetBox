@@ -118,6 +118,7 @@
         __weak GoogleCalendarEventDetailViewController *weakSelf = self;
         [DropboxAPIBridge createSharedFolderWithName:self.event.summary callback:^(BOOL sucess) {
             if (sucess) {
+                [weakSelf shareThisFolder];
                 [weakSelf navigateToSharedFolderView];
             } else {
                 NSLog(@"Error: creating shared folder.");
@@ -132,7 +133,13 @@
 }
 
 - (void)shareThisFolder {
-    
+    NSMutableArray *memberEmailsToAdd = [[NSMutableArray alloc] init];
+    for (GTLRCalendar_EventAttendee *attendee in self.event.attendees) {
+        if (![attendee.selfProperty boolValue]) {
+            [memberEmailsToAdd addObject:attendee.email];
+        }
+    }
+    [DropboxAPIBridge addFolderMemebers:self.event.summary members:memberEmailsToAdd];
 }
 
 - (void)didReceiveMemoryWarning {
