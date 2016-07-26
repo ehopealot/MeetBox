@@ -26,6 +26,7 @@
 		1BCA0F111D46CA1D00768DDC /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BCA0F101D46CA1D00768DDC /* GTMOAuth2ViewTouch.xib */; };
 		1BCA0F151D46DF9400768DDC /* GoogleCalendarEventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA0F131D46D48500768DDC /* GoogleCalendarEventDetailViewController.m */; };
 		2C3121631D46CAF00021D681 /* DropboxAPIBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3121621D46CAF00021D681 /* DropboxAPIBridge.swift */; };
+		2CC3803A1D46E2C6007DB496 /* EventSharedFolderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC380391D46E2C6007DB496 /* EventSharedFolderViewController.m */; };
 		63DE5B494FD1B4DE4C663C83 /* Pods_MeetBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5737E8B5E8B6E10E76E83F /* Pods_MeetBox.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,8 @@
 		23FFA3A5359AF4F3B350B80A /* Pods-MeetBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeetBox/Pods-MeetBox.release.xcconfig"; sourceTree = "<group>"; };
 		2C3121611D46CAF00021D681 /* MeetBox-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MeetBox-Bridging-Header.h"; sourceTree = "<group>"; };
 		2C3121621D46CAF00021D681 /* DropboxAPIBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxAPIBridge.swift; sourceTree = "<group>"; };
+		2CC380381D46E2C6007DB496 /* EventSharedFolderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventSharedFolderViewController.h; sourceTree = "<group>"; };
+		2CC380391D46E2C6007DB496 /* EventSharedFolderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventSharedFolderViewController.m; sourceTree = "<group>"; };
 		AF5737E8B5E8B6E10E76E83F /* Pods_MeetBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -117,6 +120,8 @@
 				1BCA0F131D46D48500768DDC /* GoogleCalendarEventDetailViewController.m */,
 				2C3121621D46CAF00021D681 /* DropboxAPIBridge.swift */,
 				2C3121611D46CAF00021D681 /* MeetBox-Bridging-Header.h */,
+				2CC380381D46E2C6007DB496 /* EventSharedFolderViewController.h */,
+				2CC380391D46E2C6007DB496 /* EventSharedFolderViewController.m */,
 			);
 			path = MeetBox;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 				1BA3F6711D46C42800911B4F /* GoogleCalendarViewController.m in Sources */,
 				1BCA0F0E1D46C96A00768DDC /* GTLRCalendarQuery.m in Sources */,
 				1BA3F6691D46B8F700911B4F /* GTLRNetworking_Sources.m in Sources */,
+				2CC3803A1D46E2C6007DB496 /* EventSharedFolderViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

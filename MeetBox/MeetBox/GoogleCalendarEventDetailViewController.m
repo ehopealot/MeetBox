@@ -7,12 +7,16 @@
 //
 
 #import "GoogleCalendarEventDetailViewController.h"
+#import "EventSharedFolderViewController.h"
 #import "GTLRCalendar.h"
+#import "MeetBox-Swift.h"
 
 @interface GoogleCalendarEventDetailViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) GTLRCalendar_Event *event;
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, assign) BOOL folderExist;
+
 @end
 
 @implementation GoogleCalendarEventDetailViewController
@@ -22,6 +26,7 @@
     self = [super init];
     if (self) {
         _event = event;
+        _folderExist = NO;
     }
     return self;
 }
@@ -38,7 +43,22 @@
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[t]|" options:0 metrics:0 views:NSDictionaryOfVariableBindings(t)]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[t]|" options:0 metrics:0 views:NSDictionaryOfVariableBindings(t)]];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ID"];
+    
+    [self checkFolderExistance];
+}
 
+- (void)checkFolderExistance
+{
+    __weak GoogleCalendarEventDetailViewController *weakSelf = self;
+    [DropboxAPIBridge isFolderExist:self.event.summary callback: ^(BOOL folderExist) {
+        weakSelf.folderExist = folderExist;
+    }];
+}
+
+- (void)setFolderExist:(BOOL)folderExist
+{
+    _folderExist = folderExist;
+    [self.tableView reloadData];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -75,7 +95,7 @@
     if (indexPath.section == 0) {
         cell.textLabel.text = _event.summary;
     } else if (indexPath.section == 1) {
-        cell.textLabel.text = @"Create shared folder";
+        cell.textLabel.text = [NSString stringWithFormat:@"%@ shared folder", (self.folderExist ? @"Open" : @"Create")];
         cell.textLabel.textColor = [UIColor blueColor];
     } else if (indexPath.section == 2) {
         GTLRCalendar_EventAttendee *attendee = _event.attendees[indexPath.item];
@@ -87,6 +107,32 @@
         }
     }
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (self.folderExist) {
+        [self navigateToSharedFolderView];
+    } else {
+        __weak GoogleCalendarEventDetailViewController *weakSelf = self;
+        [DropboxAPIBridge createSharedFolderWithName:self.event.summary callback:^(BOOL sucess) {
+            if (sucess) {
+                [weakSelf navigateToSharedFolderView];
+            } else {
+                NSLog(@"Error: creating shared folder.");
+            }
+        }];
+    }
+}
+
+- (void)navigateToSharedFolderView {
+    EventSharedFolderViewController *folderVC = [[EventSharedFolderViewController alloc] initWithFolderName:self.event.summary];
+    [self.navigationController pushViewController:folderVC animated:YES];
+}
+
+- (void)shareThisFolder {
+    
 }
 
 - (void)didReceiveMemoryWarning {

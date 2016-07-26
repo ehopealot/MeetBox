@@ -35,6 +35,30 @@ import SwiftyDropbox
         }
     }
     
+    static func createSharedFolderWithName(folderName: NSString, callback: ((Bool) -> (Void))) {
+        Dropbox.authorizedClient!.files.createFolder(path: "/MeetBox/\(folderName as String)").response { (meta: (Files.FolderMetadata)?, ce: CallError<(Files.CreateFolderError)>?) in
+            var sucess = false
+            if (ce == nil) {
+                sucess = true
+            } else {
+                print("Error \(ce)")
+            }
+            callback(sucess)
+        }
+    }
+    
+    static func isFolderExist(folderName: NSString, callback: ((Bool) -> (Void))) {
+        Dropbox.authorizedClient!.files.getMetadata(path: "/MeetBox/\(folderName as String)").response { (meta: (Files.Metadata)?, ce: CallError<(Files.GetMetadataError)>?) in
+            print(ce == nil && meta != nil)
+            let folderExist = (ce == nil && meta != nil)
+            callback(folderExist)
+        }
+    }
+    
+    static func shareFolderWith(foldername: NSString) {
+        
+    }
+    
     static func playWithAPIs() {
         /*
         Dropbox.authorizedClient!.files.getMetadata(path: "/app.js").response({ (meta: (Files.Metadata)?, ce: CallError<(Files.GetMetadataError)>?) in
