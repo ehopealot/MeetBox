@@ -24,6 +24,7 @@
 		1BCA0F0E1D46C96A00768DDC /* GTLRCalendarQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA0F0A1D46C96A00768DDC /* GTLRCalendarQuery.m */; };
 		1BCA0F0F1D46C96A00768DDC /* GTLRCalendarService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA0F0C1D46C96A00768DDC /* GTLRCalendarService.m */; };
 		1BCA0F111D46CA1D00768DDC /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BCA0F101D46CA1D00768DDC /* GTMOAuth2ViewTouch.xib */; };
+		1BCA0F151D46DF9400768DDC /* GoogleCalendarEventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA0F131D46D48500768DDC /* GoogleCalendarEventDetailViewController.m */; };
 		2C3121631D46CAF00021D681 /* DropboxAPIBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3121621D46CAF00021D681 /* DropboxAPIBridge.swift */; };
 		63DE5B494FD1B4DE4C663C83 /* Pods_MeetBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5737E8B5E8B6E10E76E83F /* Pods_MeetBox.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,8 @@
 		1BCA0F0B1D46C96A00768DDC /* GTLRCalendarService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTLRCalendarService.h; path = "google-api-objectivec-client-for-rest/Source/GeneratedServices/Calendar/GTLRCalendarService.h"; sourceTree = SOURCE_ROOT; };
 		1BCA0F0C1D46C96A00768DDC /* GTLRCalendarService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLRCalendarService.m; path = "google-api-objectivec-client-for-rest/Source/GeneratedServices/Calendar/GTLRCalendarService.m"; sourceTree = SOURCE_ROOT; };
 		1BCA0F101D46CA1D00768DDC /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GTMOAuth2ViewTouch.xib; path = "google-api-objectivec-client-for-rest/Deps/gtm-oauth2/Source/Touch/GTMOAuth2ViewTouch.xib"; sourceTree = SOURCE_ROOT; };
+		1BCA0F121D46D48500768DDC /* GoogleCalendarEventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleCalendarEventDetailViewController.h; sourceTree = "<group>"; };
+		1BCA0F131D46D48500768DDC /* GoogleCalendarEventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleCalendarEventDetailViewController.m; sourceTree = "<group>"; };
 		23FFA3A5359AF4F3B350B80A /* Pods-MeetBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeetBox/Pods-MeetBox.release.xcconfig"; sourceTree = "<group>"; };
 		2C3121611D46CAF00021D681 /* MeetBox-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MeetBox-Bridging-Header.h"; sourceTree = "<group>"; };
 		2C3121621D46CAF00021D681 /* DropboxAPIBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxAPIBridge.swift; sourceTree = "<group>"; };
@@ -110,6 +113,8 @@
 				1BA3F6391D46A69A00911B4F /* Supporting Files */,
 				1BA3F66F1D46C42800911B4F /* GoogleCalendarViewController.h */,
 				1BA3F6701D46C42800911B4F /* GoogleCalendarViewController.m */,
+				1BCA0F121D46D48500768DDC /* GoogleCalendarEventDetailViewController.h */,
+				1BCA0F131D46D48500768DDC /* GoogleCalendarEventDetailViewController.m */,
 				2C3121621D46CAF00021D681 /* DropboxAPIBridge.swift */,
 				2C3121611D46CAF00021D681 /* MeetBox-Bridging-Header.h */,
 			);
@@ -295,6 +300,7 @@
 				2C3121631D46CAF00021D681 /* DropboxAPIBridge.swift in Sources */,
 				1BA3F6411D46A69B00911B4F /* ViewController.m in Sources */,
 				1BA3F63E1D46A69B00911B4F /* AppDelegate.m in Sources */,
+				1BCA0F151D46DF9400768DDC /* GoogleCalendarEventDetailViewController.m in Sources */,
 				1BA3F63B1D46A69A00911B4F /* main.m in Sources */,
 				1BA3F66A1D46B8F700911B4F /* GTLROAuth2_Sources.m in Sources */,
 				1BA3F66B1D46B8F700911B4F /* GTLRCommon_Sources.m in Sources */,

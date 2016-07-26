@@ -7,6 +7,8 @@
 //
 
 #import "GoogleCalendarViewController.h"
+
+#import "GoogleCalendarEventDetailViewController.h"
 #import "GTMOauth2ViewControllerTouch.h"
 #import "GTLRCalendar.h"
 #import "GTLRCalendarQuery.h"
@@ -43,7 +45,7 @@ static NSString *const KEYCHAIN_NAME = @"Google Calendar API";
     self.service = [[GTLRCalendarService alloc] init];
     self.service.authorizer = [GTMOAuth2ViewControllerTouch authForGoogleFromKeychainForName:KEYCHAIN_NAME clientID:[GoogleCalendarViewController getClientId] clientSecret:nil];
 
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
     [self.tableView setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
@@ -112,6 +114,11 @@ static NSString *const KEYCHAIN_NAME = @"Google Calendar API";
     return [_events.items count];
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return @"Calendar Events";
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ID" forIndexPath:indexPath];
@@ -123,6 +130,8 @@ static NSString *const KEYCHAIN_NAME = @"Google Calendar API";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    GoogleCalendarEventDetailViewController *detailVC = [[GoogleCalendarEventDetailViewController alloc] initWithEvent:_events.items[indexPath.item]];
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
